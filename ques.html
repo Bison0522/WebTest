@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Questionnaire</title>
+</head>
+<body>
+
+<p>Write descriptions.</p>
+
+<div>
+<h5>Q1.CHECK YOUR ANSWER</h5>
+<label><input type="radio" name="R1" value="a">A</label>
+<label><input type="radio" name="R1" value="b">B</label>
+<label><input type="radio" name="R1" value="c">C</label>
+</div>
+
+<div>
+<h5>Q2.CHECK YOUR ANSWER</h5>
+<label><input type="radio" name="R2" value="a">A</label>
+<label><input type="radio" name="R2" value="b">B</label>
+<label><input type="radio" name="R2" value="c">C</label>
+</div>
+
+<div>
+<h5>Q3.TYPE YOUR ANSWER</h5>
+<label for="T1">ANSWER</label>
+<input type="text" name="T1">
+</div>
+
+<div>
+<h5>Q4.TYPE YOUR ANSWER</h5>
+<label for="T2">ANSWER</label>
+<input type="text" name="T2">
+</div>
+
+<div>
+<br />
+<input type="button" value="Check" id="checkButton">
+</div>
+
+<div id="output"></div>
+
+<script>
+function butotnClick(){
+  const RADIO_NUMBER = 2;
+  const TEXT_NUMBER = 2;
+
+  console.log('Submitted');
+
+  for (let j = 1; j <= RADIO_NUMBER; j++){
+    let Answer = 'null';
+    let Radio = document.getElementsByName('R'+j);
+    let len = Radio.length;
+    
+    for (let i = 0; i < len; i++){
+      if (Radio.item(i).checked){
+        Answer = Radio.item(i).value;
+      }
+    }
+    console.log('A'+j+ ': '+Answer);
+  }
+
+  for (let j = 1; j <= TEXT_NUMBER; j++){
+    let Aswer = 'null';
+    let Text = document.getElementsByName('T'+j);
+    const Answer = Text.item(0).value;
+    console.log('T'+j+ ': '+Answer);
+  }
+
+  target = document.getElementById('output');
+  target.innerHTML = 'Your IP address: '+ip;
+}
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+
+let ip = 0;
+fetch('https://ipinfo.io?callback')
+  .then(res => res.json())
+  .then(json => ip=json.ip)
+
+
+</script>
+
+</body>
+</html>
