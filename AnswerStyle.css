@@ -4,6 +4,8 @@
 
 .answerbox{
   font-size: 20px;
+    left: 100px;
+    position: absolute;
 }
 
 .buttonposSend{
