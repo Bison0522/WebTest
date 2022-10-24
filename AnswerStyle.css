@@ -3,13 +3,13 @@
 }
 
 .answerbox{
-  font-size: 20px;
+  font-size: 15pt;
     left: 100px;
     position: absolute;
 }
 
 .buttonposSend{
-  font-size: 20px;
+  font-size: 15pt;
   left: 200px;
   position: absolute;
 }
