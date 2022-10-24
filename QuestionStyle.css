@@ -1,6 +1,7 @@
 .text1{
   font-size: 50pt;
   font-style: normal;
+  position: absolute;
   top: 10pt;
   left: 10pt;
 }
@@ -18,6 +19,7 @@
 .text2{
   font-size: 50pt;
   font-style: normal;
+  position: absolute;
   top: 10pt;
   left: 80pt;
 }
@@ -35,6 +37,7 @@
 .text3{
   font-size: 50pt;
   font-style: normal;
+  position: absolute;
   top: 10pt;
   left: 150pt;
 }
