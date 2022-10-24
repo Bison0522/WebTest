@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 
 <html lang="ja">
- <head>
-   <meta charset="UTF-8">
-   <Sheet1>
-   <link rel="stylesheet" href="QuestionStyle.css">
- </head>
- <body>
-   <div class="vectrical">
-     <div class="text1">漢字</div>
-     <div class="text2">漢字</div>
-     <div class="text3">漢字</div>
-   </div><br>
-   
-   <input type="button" class="buttonposAns" onclick="location.href='https://bison0522.github.io/WebTest/AnswerSheet.html'" value="回答する">
-   <input type="button" class="buttonposSkip" value="スキップ">
- </body>
+  <head>
+    <meta charset="UTF-8">
+    <Sheet1>
+    <link rel="stylesheet" href="QuestionStyle.css">
+  </head>
+  <body>
+    <div class="vectrical">
+      <div class="text1" id="text1">漢字</div>
+      <div class="text2" id="text2">漢字</div>
+      <div class="text3" id="text3">漢字</div>
+    </div><br>
+
+    <input type="button" class="buttonposAns" onclick="location.href='https://bison0522.github.io/WebTest/AnswerSheet.html'" value="回答する">
+    <input type="button" class="buttonposSkip" value="スキップ">
+
+
+    <script>
+    window.onload = function(){
+      getCsv("Questions.csv");
+    }
+    
+    function getCsv(data){
+      let xhr = new XMLHttpRequest(); 
+      xhr.open("GET",data,true);
+      xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                let responce = xhr.responseText;
+                csvArr(responce);
+              } 
+              else {
+                console.error(xhr.statusText);
+              }
+          }
+      };
+      xhr.send(null);
+    }
+    
+    function csvArr(dataArr){
+      let arr =[];
+      let list = dataArr.split('\n');
+      for(let i = 0; i <list.length; i++){
+        arr[i] = list[i].split(',');
+      }
+      checkAns(arr);
+    }
+    
+    function checkAns(dataList){
+      let text1 = document.getElementById("text1");
+      text1.innerHTML = dataList[2][2];
+    }
+    </script>
+  </body>
 </html>
