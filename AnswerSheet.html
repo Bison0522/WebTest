@@ -27,6 +27,15 @@
       target = document.getElementById('output');
       target.innerHTML = 'Your IP address: '+ip;
     }
+    
+    xhr.onload = function (e) {
+    if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        } else {
+        console.error(xhr.statusText);
+        }
+    }
 
     let checkButton = document.getElementById('checkButton');
     checkButton.addEventListener('click', buttonClick);
@@ -34,7 +43,11 @@
     let ip = 0;
     fetch('https://ipinfo.io?callback')
       .then(res => res.json())
-      .then(json => ip=json.ip)
+      .then(json => ip=json.ip);
+    
+    let xhr = new XMLHttpRequest(); 
+    xhr.open("GET",'Questions.csv',true);
+    xhr.send(null);
 
     </script>
 
