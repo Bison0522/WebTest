@@ -20,7 +20,9 @@
     <script>
     window.onload = function(){
       let qcsv = getCsv("Questions.csv");
+      let logcsv = getCsv("Log.csv");
       let qarr = csvArr(qcsv);
+      let logarr = csvArr(logcsv);
       checkAns(qarr);
     }
     
@@ -41,7 +43,7 @@
       xhr.send(null);
     }
     
-    function csvArr(dataArr){
+    function csvArr(dataArr[]){
       let arr =[];
       let list = dataArr.split('\n');
       for(let i = 0; i <list.length; i++){
@@ -50,7 +52,7 @@
       return arr;
     }
     
-    function checkAns(dataList){
+    function checkAns(dataList[]){
       let i = dataList.length - 2;
       let num = getRandomInt(1, i);
     
