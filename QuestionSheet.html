@@ -49,9 +49,8 @@
     }
     
     function checkAns(dataList){
-      let num = getRandomInt(1, 20);
-      let i = dataList.length;
-      console.log(i);
+      let i = dataList.length - 2;
+      let num = getRandomInt(1, i);
     
       let text1 = document.getElementById("text1");
       let text2 = document.getElementById("text2");
