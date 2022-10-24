@@ -4,8 +4,6 @@
   font-size: 50pt;
   line-height: 1.2;
   font-style: normal;
-  color: blue;
-}
-.text1 span:ntn-child(2){
-  color: red;
+  background-clip: text;
+  background: #b22222 1em 2em;
 }
