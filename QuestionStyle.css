@@ -15,3 +15,39 @@
   width: 60pt;
   height: 50pt;
 }
+
+.text2{
+  writing-mode: vertical-lr;
+  font-size: 50pt;
+  font-style: normal;
+  top: 10pt;
+  left: 80pt;
+}
+
+.text2:before{
+  content: "";
+  position: absolute;
+  border: 2px solid black;
+  top: 55pt;
+  left: 80pt;
+  width: 60pt;
+  height: 50pt;
+}
+
+.text3{
+  writing-mode: vertical-lr;
+  font-size: 50pt;
+  font-style: normal;
+  top: 10pt;
+  left: 150pt;
+}
+
+.text3:before{
+  content: "";
+  position: absolute;
+  border: 2px solid black;
+  top: 55pt;
+  left: 150pt;
+  width: 60pt;
+  height: 50pt;
+}
