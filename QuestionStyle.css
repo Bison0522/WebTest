@@ -5,3 +5,6 @@
   line-height: 1.2;
   font-style: normal;
 }
+.text1 span:ntn-child(2){
+  color: red;
+}
