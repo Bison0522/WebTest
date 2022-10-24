@@ -2,6 +2,8 @@
   writing-mode: vertical-lr;
   font-size: 50pt;
   font-style: normal;
+  top: 10pt;
+  left: 10pt;
 }
 
 .text1:before{
@@ -9,6 +11,6 @@
    position: absolute;
    border: 2px solid black;
    top: 50pt;
-   width: 60pt;
-   height: 50pt;
+   width: 70pt;
+   height: 70pt;
 }
