@@ -36,19 +36,27 @@
       .then(res => res.json())
       .then(json => ip=json.ip);
     
-    let xhr = new XMLHttpRequest(); 
-    xhr.open("GET",'Questions.csv',true);
-    xhr.send(null);
-
-    xhr.onload = function (e) {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          console.log(xhr.responseText);
-        }
-        else {
-          console.error(xhr.statusText);
-        }
-      }
+    
+    
+    window.onload = function(){
+      getCsv(Questions.csv);
+    }
+    
+    function getCsv(data){
+      let xhr = new XMLHttpRequest(); 
+      xhr.open("GET",data,true);
+      xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                let responce = xhr.responseText;
+                csvArr(responce);
+              } 
+              else {
+                console.error(xhr.statusText);
+              }
+          }
+      };
+      xhr.send(null);
     }
     
     function csvArr(dataArr){
@@ -57,18 +65,11 @@
       for(let i = 0; i <list.length; i++){
         arr[i] = list[i].split(',');
       }
+      checkAns(arr);
     }
     
-    function htmlWrite(dataList){
-      console.log(dataList);
-      let insert ="";
-      dataList.forEach(element => {
-          insert +='<tr>';
-          element.forEach((childElement) =>{
-              insert +=`<td>${childElement}</td>`;
-          });
-          insert +='</tr>'
-      });
+    function checkAns(dataList){
+      console.log(dataList[2][2]);
     }
 
     </script>
