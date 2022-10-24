@@ -30,12 +30,12 @@
     
     function getCsv(data){
       let xhr = new XMLHttpRequest(); 
+      let responce = [];
       xhr.open("GET",data,true);
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
-                let responce = xhr.responseText;
-                return responce;
+                responce = xhr.responseText;
               } 
               else {
                 console.error(xhr.statusText);
@@ -43,9 +43,10 @@
           }
       };
       xhr.send(null);
+      return responce;
     }
     
-    function csvArr(String dataArr){
+    function csvArr(dataArr){
       let arr =[];
       let list = dataArr.split('\n');
       for(let i = 0; i <list.length; i++){
