@@ -17,7 +17,7 @@
 .text1:before{
   width: 60pt;
   height: 50pt;
-  top: 49pt;
+  top: 51pt;
   left: 6pt;
   content: "";
   position: absolute;
@@ -37,7 +37,7 @@
 .text2:before{
   width: 60pt;
   height: 50pt;
-  top: 49pt;
+  top: 51pt;
   left: 6pt;
   content: "";
   position: absolute;
@@ -57,7 +57,7 @@
 .text3:before{
   width: 60pt;
   height: 50pt;
-  top: 49pt;
+  top: 51pt;
   left: 6pt;
   content: "";
   position: absolute;
