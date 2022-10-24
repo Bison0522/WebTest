@@ -1,9 +1,10 @@
 .text1{
-  writing-mode: vertical-rl;
-  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
   font-size: 50pt;
   line-height: 1.2;
   font-style: normal;
+  color: blue;
 }
 .text1 span:ntn-child(2){
   color: red;
