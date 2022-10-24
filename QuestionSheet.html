@@ -51,11 +51,11 @@
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+      return Math.floor(Math.random() * (max - min) + min); 
     }
     
     function checkAns(dataList){
-      int num = getRandomInt(1, (datalist.length - 2));
+      let num = getRandomInt(1, (datalist.length - 2));
       console.log(num);
     
       let text1 = document.getElementById("text1");
