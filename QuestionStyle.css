@@ -2,8 +2,13 @@
    writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
   font-size: 50pt;
-  line-height: 1;
   font-style: normal;
-  border: 2px solid black;
-  height: 100pt;
+}
+
+.text:before{
+   content: "";
+   position: absolute;
+   border: 2px solid black;
+   width: 60pt;
+   height: 50pt;
 }
