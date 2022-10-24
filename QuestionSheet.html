@@ -48,12 +48,6 @@
       checkAns(arr);
     }
     
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min) + min); 
-    }
-    
     function checkAns(dataList){
       let num = getRandomInt(1, (datalist.length - 2));
       console.log(num);
@@ -64,6 +58,12 @@
       text1.innerHTML = dataList[num][1];
       text2.innerHTML = dataList[num][2];
       text3.innerHTML = dataList[num][3];
+    }
+    
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min) + min); 
     }
     </script>
   </body>
