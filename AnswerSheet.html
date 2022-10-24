@@ -27,15 +27,6 @@
       target = document.getElementById('output');
       target.innerHTML = 'Your IP address: '+ip;
     }
-    
-    xhr.onload = function (e) {
-    if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        } else {
-        console.error(xhr.statusText);
-        }
-    }
 
     let checkButton = document.getElementById('checkButton');
     checkButton.addEventListener('click', buttonClick);
@@ -48,6 +39,15 @@
     let xhr = new XMLHttpRequest(); 
     xhr.open("GET",'Questions.csv',true);
     xhr.send(null);
+
+    xhr.onload = function (e) {
+    if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        } else {
+        console.error(xhr.statusText);
+        }
+    }
 
     </script>
 
