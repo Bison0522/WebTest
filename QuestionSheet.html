@@ -19,10 +19,8 @@
 
     <script>
     window.onload = function(){
-      let qcsv[] = getCsv("Questions.csv");
-      let logcsv[] = getCsv("Log.csv");
-      let qarr[] = csvArr(qcsv);
-      let logarr[] = csvArr(logcsv);
+      let qarr = csvArr(getCsv("Questions.csv"););
+      let logarr = csvArr(getCsv("Log.csv"););
       
       for(let i = 0; i <logarr.length; i++){
         arr[i] = list[i].split(',');
