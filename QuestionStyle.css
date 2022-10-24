@@ -63,8 +63,14 @@
   border: 2px solid black;
 }
 
-.buttonpos{
+.buttonposAns{
   position: absolute;
-  left: 160px;
+  left: 100px;
+  top: 200px;
+}
+
+.buttonposSkip{
+  position: absolute;
+  left: 230px;
   top: 200px;
 }
