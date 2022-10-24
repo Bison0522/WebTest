@@ -1,9 +1,9 @@
 .text1{
-  writing-mode: vertical-lr;
+   writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
   font-size: 50pt;
-  line-height: 1.2;
+  line-height: 1;
   font-style: normal;
-  background-clip: border-box;
-  background: 180deg, black 1em 2em;
+  border: 2px solid black;
+  height: 100pt;
 }
