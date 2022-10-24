@@ -3,23 +3,23 @@
 }
 
 .text1{
-  font-size: 50pt;
-  font-style: normal;
-  position: absolute;
   width: 60pt;
   height: 100pt;
   top: 10pt;
   left: 10pt;
+  font-size: 50pt;
+  font-style: normal;
+  position: absolute;
 }
 
 .text1:before{
+  width: 60pt;
+  height: 50pt;
+  top: 55pt;
+  left: 10pt;
   content: "";
   position: absolute;
   border: 2px solid black;
-  top: 55pt;
-  left: 10pt;
-  width: 60pt;
-  height: 50pt;
 }
 
 .text2{
