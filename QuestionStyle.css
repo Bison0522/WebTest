@@ -1,5 +1,5 @@
 .text1{
-   writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
   font-size: 50pt;
   font-style: normal;
@@ -9,6 +9,7 @@
    content: "";
    position: absolute;
    border: 2px solid black;
+   top: -50pt;
    width: 60pt;
    height: 50pt;
 }
