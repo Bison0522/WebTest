@@ -22,6 +22,7 @@
 </html>
 
 <script>
+<!DOCTYPE java>
 function butotnClick(){
   let Ans = 'null';
   let Text = document.getElementsByName('Answer');
@@ -39,6 +40,5 @@ let ip = 0;
 fetch('https://ipinfo.io?callback')
   .then(res => res.json())
   .then(json => ip=json.ip)
-
 
 </script>
