@@ -16,8 +16,8 @@
 .text1:before{
   width: 60pt;
   height: 50pt;
-  top: 55pt;
-  left: 10pt;
+  top: 49pt;
+  left: 6pt;
   content: "";
   position: absolute;
   border: 2px solid black;
