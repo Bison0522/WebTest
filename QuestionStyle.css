@@ -53,12 +53,6 @@
   position: absolute;
 }
 
-.buttonpos{
-  position: absolute;
-  left: 300px;
-  top: 300px;
-}
-
 .text3:before{
   width: 60pt;
   height: 50pt;
@@ -67,4 +61,10 @@
   content: "";
   position: absolute;
   border: 2px solid black;
+}
+
+.buttonpos{
+  position: absolute;
+  left: 300px;
+  top: 300px;
 }
