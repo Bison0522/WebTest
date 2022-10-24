@@ -24,6 +24,9 @@
       let qarr = csvArr(qcsv);
       let logarr = csvArr(logcsv);
       
+      for(let i = 0; i <logarr.length; i++){
+        arr[i] = list[i].split(',');
+      }
       checkAns(qarr);
     }
     
@@ -44,7 +47,7 @@
       xhr.send(null);
     }
     
-    function csvArr(String dataArr[]){
+    function csvArr(let dataArr[]){
       let arr =[];
       let list = dataArr.split('\n');
       for(let i = 0; i <list.length; i++){
@@ -53,7 +56,7 @@
       return arr;
     }
     
-    function checkAns(String dataList[]){
+    function checkAns(let dataList[]){
       let i = dataList.length - 2;
       let num = getRandomInt(1, i);
     
