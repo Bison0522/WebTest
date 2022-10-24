@@ -6,6 +6,8 @@
   font-size: 50pt;
   font-style: normal;
   position: absolute;
+  width: 60pt;
+  height: 100pt;
   top: 10pt;
   left: 10pt;
 }
