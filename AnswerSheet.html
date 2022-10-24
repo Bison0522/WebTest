@@ -22,7 +22,7 @@
 
 <script>
 <!DOCTYPE java>
-function butotnClick(){
+function buttotnClick(){
   let Text = document.getElementsByName('Answer');
   let Ans = Text.item(0).value;
   console.log('Answer'+ ': '+Ans);
@@ -32,7 +32,7 @@ function butotnClick(){
 }
 
 let checkButton = document.getElementById('checkButton');
-checkButton.addEventListener('click', butotnClick);
+checkButton.addEventListener('click', buttonClick);
 
 let ip = 0;
 fetch('https://ipinfo.io?callback')
