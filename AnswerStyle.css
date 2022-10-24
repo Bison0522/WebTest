@@ -1,21 +1,21 @@
 .answertext{
   font-size: 25pt;
   left: 100px;
-  top: 0px;
+  top: 10px;
   position: absolute;
 }
 
 .answerbox{
   font-size: 25pt;
-  left: 0px;
-  top: 30px;
+  left: 20px;
+  top: 50px;
   position: absolute;
 }
 
 .buttonposSend{
   font-size: 15pt;
-  left: 160px;
-  top: 100px;
+  left: 150px;
+  top: 200px;
   position: absolute;
 }
 
