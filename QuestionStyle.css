@@ -1,6 +1,7 @@
 .vectrical{
   writing-mode: vertical-lr; 
-  line-height:100px
+  line-height:100px;
+  letter-spacing: 3px;
 }
 
 .text1{
