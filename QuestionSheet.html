@@ -17,9 +17,7 @@
     <input type="button" class="buttonposSkip" value="スキップ">
 
 
-    <script type="module">
-    import {Random} from "java.util.Random";
-    
+    <script>
     window.onload = function(){
       getCsv("Questions.csv");
     }
@@ -50,9 +48,14 @@
       checkAns(arr);
     }
     
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    }
+    
     function checkAns(dataList){
-      Random rand = new Random();
-      int num = rand.nextInt(datalist.length - 2) + 1;
+      int num = getRandomInt(1, (datalist.length - 2));
       console.log(num);
     
       let text1 = document.getElementById("text1");
