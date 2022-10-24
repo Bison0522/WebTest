@@ -19,8 +19,8 @@
 
     <script>
     window.onload = function(){
-      let qarr = csvArr(getCsv("Questions.csv"));
-      let logarr = csvArr(getCsv("Log.csv"));
+      getCsv("Questions.csv");
+      getCsv("Log.csv");
       
       for(let i = 0; i <logarr.length; i++){
         arr[i] = list[i].split(',');
@@ -36,6 +36,7 @@
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 responce = xhr.responseText;
+                csvArr(responce);
               } 
               else {
                 console.error(xhr.statusText);
@@ -43,7 +44,6 @@
           }
       };
       xhr.send(null);
-      return responce;
     }
     
     function csvArr(dataArr){
@@ -52,7 +52,7 @@
       for(let i = 0; i <list.length; i++){
         arr[i] = list[i].split(',');
       }
-      return arr;
+      checkAns(arr);
     }
     
     function checkAns(dataList){
