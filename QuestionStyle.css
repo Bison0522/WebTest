@@ -65,14 +65,14 @@
 
 .buttonposAns{
   position: absolute;
-  left: 100px;
+  left: 80px;
   top: 200px;
   font-size: 15pt;
 }
 
 .buttonposSkip{
   position: absolute;
-  left: 230px;
+  left: 215px;
   top: 200px;
   font-size: 15pt;
 }
