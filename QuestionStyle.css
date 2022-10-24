@@ -1,5 +1,8 @@
-.text1{
+.vectrical{
   writing-mode: vertical-lr; 
+}
+
+.text1{
   font-size: 50pt;
   font-style: normal;
   position: absolute;
@@ -18,7 +21,6 @@
 }
 
 .text2{
-  writing-mode: vertical-lr; 
   font-size: 50pt;
   font-style: normal;
   position: absolute;
@@ -37,7 +39,6 @@
 }
 
 .text3{
-  writing-mode: vertical-lr; 
   font-size: 50pt;
   font-style: normal;
   position: absolute;
