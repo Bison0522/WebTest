@@ -41,12 +41,14 @@
     xhr.send(null);
 
     xhr.onload = function (e) {
-    if (xhr.readyState === 4) {
+      if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        } else {
-        console.error(xhr.statusText);
+          console.log(xhr.responseText);
         }
+        else {
+          console.error(xhr.statusText);
+        }
+      }
     }
 
     </script>
