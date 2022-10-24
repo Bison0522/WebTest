@@ -1,5 +1,4 @@
 .text1{
-  writing-mode: vertical-lr;
   font-size: 50pt;
   font-style: normal;
   top: 10pt;
@@ -17,7 +16,6 @@
 }
 
 .text2{
-  writing-mode: vertical-lr;
   font-size: 50pt;
   font-style: normal;
   top: 10pt;
@@ -35,7 +33,6 @@
 }
 
 .text3{
-  writing-mode: vertical-lr;
   font-size: 50pt;
   font-style: normal;
   top: 10pt;
