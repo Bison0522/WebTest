@@ -1,4 +1,6 @@
 .text1{
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
   font-size: 50pt;
   line-height: 1.2;
   font-style: normal;
