@@ -17,26 +17,27 @@
     </div>
 
     <div id="output"></div>
+
+    <script>
+    <!DOCTYPE java>
+    function buttotnClick(){
+      let Text = document.getElementsByName('Answer');
+      let Ans = Text.item(0).value;
+      console.log('Answer'+ ': '+Ans);
+
+      target = document.getElementById('output');
+      target.innerHTML = 'Your IP address: '+ip;
+    }
+
+    let checkButton = document.getElementById('checkButton');
+    checkButton.addEventListener('click', buttonClick);
+
+    let ip = 0;
+    fetch('https://ipinfo.io?callback')
+      .then(res => res.json())
+      .then(json => ip=json.ip)
+
+    </script>
+
   </body>
 </html>
-
-<script>
-<!DOCTYPE java>
-function buttotnClick(){
-  let Text = document.getElementsByName('Answer');
-  let Ans = Text.item(0).value;
-  console.log('Answer'+ ': '+Ans);
-
-  target = document.getElementById('output');
-  target.innerHTML = 'Your IP address: '+ip;
-}
-
-let checkButton = document.getElementById('checkButton');
-checkButton.addEventListener('click', buttonClick);
-
-let ip = 0;
-fetch('https://ipinfo.io?callback')
-  .then(res => res.json())
-  .then(json => ip=json.ip)
-
-</script>
