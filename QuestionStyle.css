@@ -3,7 +3,7 @@
   line-height:100px
 }
 
-.text1{
+.text2{
   width: 60pt;
   height: 100pt;
   top: 10pt;
@@ -13,7 +13,7 @@
   position: absolute;
 }
 
-.text1:before{
+.text2:before{
   width: 60pt;
   height: 50pt;
   top: 49pt;
@@ -23,38 +23,22 @@
   border: 2px solid black;
 }
 
-.text2{
-  font-size: 50pt;
-  font-style: normal;
-  position: absolute;
-  top: 10pt;
-  left: 80pt;
-}
-
-.text2:before{
-  content: "";
-  position: absolute;
-  border: 2px solid black;
-  top: 55pt;
-  left: 80pt;
-  width: 60pt;
-  height: 50pt;
-}
-
 .text3{
+  width: 60pt;
+  height: 100pt;
+  top: 10pt;
+  left: 10pt;
   font-size: 50pt;
   font-style: normal;
   position: absolute;
-  top: 10pt;
-  left: 150pt;
 }
 
 .text3:before{
+  width: 60pt;
+  height: 50pt;
+  top: 49pt;
+  left: 6pt;
   content: "";
   position: absolute;
   border: 2px solid black;
-  top: 55pt;
-  left: 150pt;
-  width: 60pt;
-  height: 50pt;
 }
