@@ -7,5 +7,38 @@
  </head>
  <body>
    <div class="textcolor">あほ</div>
+   <div>
+     <label for="Answer">回答欄</label>
+     <input type="text" name="Answer" required>
+   </div>
+   
+   <div>
+     <br>
+     <input type="button" value="Check" id="checkButton">
+   </div>
+   
+   <div id="output"></div>
  </body>
 </html>
+
+<script>
+function butotnClick(){
+  let Ans = 'null';
+  let Text = document.getElementsByName('Answer');
+  const Ans = Text.item(0).value;
+  console.log('Answer'+ ': '+Ans);
+
+  target = document.getElementById('output');
+  target.innerHTML = 'Your IP address: '+ip;
+}
+
+let checkButton = document.getElementById('checkButton');
+checkButton.addEventListener('click', butotnClick);
+
+let ip = 0;
+fetch('https://ipinfo.io?callback')
+  .then(res => res.json())
+  .then(json => ip=json.ip)
+
+
+</script>
