@@ -51,12 +51,24 @@
       }
     }
     
-    let arr =[];
     function csvArr(dataArr){
+      let arr =[];
       let list = dataArr.split('\n');
       for(let i = 0; i <list.length; i++){
         arr[i] = list[i].split(',');
       }
+    }
+    
+    function htmlWrite(dataList){
+      console.log(dataList);
+      let insert ="";
+      dataList.forEach(element => {
+          insert +='<tr>';
+          element.forEach((childElement) =>{
+              insert +=`<td>${childElement}</td>`;
+          });
+          insert +='</tr>'
+      });
     }
 
     console.log(arr[2][2]);
