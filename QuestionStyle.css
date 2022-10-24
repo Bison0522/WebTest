@@ -1,11 +1,10 @@
 .text1{
   writing-mode: vertical-lr;
-  -ms-writing-mode: tb-lr;
   font-size: 50pt;
   font-style: normal;
 }
 
-.text:before{
+.text1:before{
    content: "";
    position: absolute;
    border: 2px solid black;
