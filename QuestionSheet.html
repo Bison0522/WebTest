@@ -19,6 +19,11 @@
 
     <script>
     window.onload = function(){
+      let ip = 0;
+      fetch('https://ipinfo.io?callback')
+        .then(res => res.json())
+        .then(json => ip=json.ip);
+      
       getCsv("Questions.csv", 0);
       getCsv("Log.csv", 1);
     }
@@ -49,7 +54,15 @@
         checkAns(arr);
       }
       else{
-        console.log(arr);
+        console.log(arr.length);
+        let ipmatch = false;
+        for(let i = 1; i < arr.length; i++){
+          ipmatch = (arr.[i][0] == ip);
+          if(ipmatch == true){
+            break;
+          }
+        }
+        console.log(ipmatch);
       }
     }
     
@@ -70,11 +83,6 @@
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); 
     }
-      
-    let ip = 0;
-    fetch('https://ipinfo.io?callback')
-      .then(res => res.json())
-      .then(json => ip=json.ip);
       
     </script>
   </body>
