@@ -42,7 +42,7 @@
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
-                dst  = new let(xhr.responseText);
+                dst  = new String(xhr.responseText);
               } 
               else {
                 console.error(xhr.statusText);
