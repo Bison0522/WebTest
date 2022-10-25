@@ -25,12 +25,10 @@
       qarr = csvArr(qcsv);
     }
     
-    function arrcpy(src){
-      let dst = [];
+    function arrcpy(src, dst){
       for (let i = 0; i < src.length; i++){
         dst[i] = src[i];
       }
-      return dst;
     }
       
     function getCsv(data){
@@ -40,7 +38,7 @@
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
-                responce = arrcpy(xhr.responseText);
+                arrcpy(xhr.responseText, responce);
               } 
               else {
                 console.error(xhr.statusText);
@@ -48,6 +46,7 @@
           }
       };
       xhr.send(null);
+      console.log(responce);
       return responce;
     }
     
