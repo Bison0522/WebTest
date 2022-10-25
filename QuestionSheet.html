@@ -55,13 +55,13 @@
         fetch('https://ipinfo.io?callback')
           .then(res => res.json())
           .then(json => ip=json.ip);
+        console.log(ip);
         for(let i = 1; i < (arr.length-1); i++){
           ipmatch = (arr[i][0] == ip);
           if(ipmatch == true){
             break;
           }
         }
-        console.log(ip);
       }
     }
     
