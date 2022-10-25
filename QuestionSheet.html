@@ -21,8 +21,13 @@
     window.onload = function(){
       let qcsv = [];
       let qarr = [];
+      let lcsv = [];
+      let larr = [];
       getCsv("Questions.csv", qcsv);
       csvArr(qcsv, qarr);
+      checkAns(qarr);
+      getCsv("Log.csv", lcsv);
+      csvArr(lcsv, larr);
     }
     
     function arrcpy(src, dst){
