@@ -51,7 +51,7 @@
       else{
         console.log(arr.length);
         let ipmatch = false;
-        let ip = 0;
+        let ip;
         fetch('https://ipinfo.io?callback')
           .then(res => res.json())
           .then(json => ip=json.ip);
