@@ -39,9 +39,10 @@
     }
     
     function csvArr(dataArr){
+      let arr = [];
       let list = dataArr.split('\n');
-      for(let i = 0; i <list.length; i++){
-        let arr[i] = list[i].split(',');
+      for(let i = 0; i < list.length; i++){
+        arr[i] = list[i].split(',');
       }
       checkAns(arr);
     }
@@ -63,6 +64,12 @@
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); 
     }
+      
+    let ip = 0;
+    fetch('https://ipinfo.io?callback')
+      .then(res => res.json())
+      .then(json => ip=json.ip);
+      
     </script>
   </body>
 </html>
