@@ -76,6 +76,9 @@
       text1.innerHTML = dataList[num][1];
       text2.innerHTML = dataList[num][2];
       text3.innerHTML = dataList[num][3];
+      
+      document.cookie = 'dataID='+dataList[num][0];
+      document.cookie = 'data='+dataList;
     }
     
     function getRandomInt(min, max) {
@@ -84,9 +87,6 @@
       return Math.floor(Math.random() * (max - min) + min); 
     }
     
-    
-    document.cookie = 'dataID='+dataList[num][0];
-    document.cookie = 'data='+dataList;
     console.log("QuesTab: "+document.cookie);
       
     </script>
