@@ -24,8 +24,7 @@
       let lcsv = [];
       let larr = [];
       getCsv("Questions.csv", qcsv);
-      console.log(qcsv);
-      //csvArr(qcsv, qarr);
+      csvArr(qcsv, qarr);
       //checkAns(qarr);
       //getCsv("Log.csv", lcsv);
       //csvArr(lcsv, larr);
@@ -54,10 +53,11 @@
     }
     
     function csvArr(dataArr, dst){
-      let list = dataArr.split('\n');
-      for(let i = 0; i <list.length; i++){
-        dst[i] = list[i].split(',');
-      }
+      console.log(dataArr);
+      //let list = dataArr.split('\n');
+      //for(let i = 0; i <list.length; i++){
+      //  dst[i] = list[i].split(',');
+      //}
     }
     
     function checkAns(dataList){
