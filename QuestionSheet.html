@@ -18,11 +18,10 @@
 
 
     <script type="module">
-      
-    let ip;
+
     fetch('https://ipinfo.io?callback')
       .then(res => res.json())
-      .then(json => ip=json.ip);
+      .then(json => document.cookie='ip='+json.ip);
       
     window.onload = function(){     
       getCsv("Questions.csv", 0);
@@ -88,8 +87,6 @@
       return Math.floor(Math.random() * (max - min) + min); 
     }
     
-    console.log(ip);
-    document.cookie = 'ip='+ip;
     console.log("QuesTab: "+document.cookie);
       
     </script>
