@@ -22,7 +22,6 @@
       let qarr = [];
       let larr = [];
       getCsv("Questions.csv", qarr);
-      console.log(qarr);
       checkAns(qarr);
       getCsv("Log.csv", larr);
     }
@@ -57,6 +56,7 @@
       let text1 = document.getElementById("text1");
       let text2 = document.getElementById("text2");
       let text3 = document.getElementById("text3");
+      console.log(dataList);
       text1.innerHTML = dataList[num][1];
       text2.innerHTML = dataList[num][2];
       text3.innerHTML = dataList[num][3];
