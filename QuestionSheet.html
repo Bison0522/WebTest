@@ -20,15 +20,15 @@
     <script type="module">
     
     let ip = 0;
-    fetch('https://ipinfo.io?callback')
-      .then(res => res.json())
-      .then(json => ip=json.ip);
-    console.log(ip);
-    document.cookie = 'ip='+ip;
       
     window.onload = function(){     
       getCsv("Questions.csv", 0);
       getCsv("Log.csv", 1);
+      fetch('https://ipinfo.io?callback')
+        .then(res => res.json())
+        .then(json => ip=json.ip);
+      console.log(ip);
+      document.cookie = 'ip='+ip;
     }
       
     function getCsv(data, num){
