@@ -82,8 +82,11 @@
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); 
     }
-     
-
+    
+    document.cookie = 'old=27';
+    document.cookie = 'address=Tokyo';
+    name = encodeURIComponent('TANAKA');
+    document.cookie = 'name=' + name;
       
     </script>
   </body>
