@@ -14,7 +14,7 @@
     </div><br>
 
     <input type="button" class="buttonposAns" onclick="location.href='https://bison0522.github.io/WebTest/AnswerSheet.html'" value="回答する">
-    <input type="button" class="buttonposSkip" onclick="location.href='https://bison0522.github.io/WebTest/QuestionSheet.html'" value="スキップ">
+    <input type="button" class="buttonposSkip" onclick="location.href='https://bison0522.github.io/WebTest/QuestionSheet.hsp'" value="スキップ">
 
 
     <script type="module">
