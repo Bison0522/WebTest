@@ -18,8 +18,6 @@
 
 
     <script type="module">
-    import {FileWriter} from './java.io.js';
-      
     window.onload = function(){     
       getCsv("Questions.csv", 0);
       getCsv("Log.csv", 1);
@@ -84,6 +82,8 @@
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); 
     }
+     
+
       
     </script>
   </body>
