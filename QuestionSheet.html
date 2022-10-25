@@ -20,13 +20,14 @@
     <script>
     window.onload = function(){
       let qcsv = [];
+      let qarr = [];
       qcsv = getCsv("Questions.csv");
-      console.log(qcsv);
+      qarr = csvArr(qcsv);
     }
     
     function arrcpy(src){
       let dst = [];
-      for (int i = 0; i < src.length; i++){
+      for (let i = 0; i < src.length; i++){
         dst[i] = src[i];
       }
       return dst;
@@ -56,7 +57,7 @@
       for(let i = 0; i <list.length; i++){
         arr[i] = list[i].split(',');
       }
-      checkAns(arr);
+      return arr;
     }
     
     function checkAns(dataList){
