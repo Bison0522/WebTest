@@ -19,46 +19,35 @@
 
     <script>
     window.onload = function(){
-      let qcsv = [];
       let qarr = [];
-      let lcsv = [];
       let larr = [];
-      getCsv("Questions.csv", qcsv);
-      csvArr(qcsv, qarr);
-      //checkAns(qarr);
+      getCsv("Questions.csv", qarr);
+      checkAns(qarr);
       //getCsv("Log.csv", lcsv);
       //csvArr(lcsv, larr);
     }
-    
-    function arrcpy(src, dst){
-      for (let i = 0; i < src.length; i++){
-        dst[i] = src[i];
-      }
-    }
       
-    function getCsv(data, dst){
+    function getCsv(data, dest){
       let xhr = new XMLHttpRequest(); 
       xhr.open("GET",data,true);
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
-                dst  = new String(xhr.responseText);
+                csvArr(xhr.responseText, dest);
               } 
               else {
                 console.error(xhr.statusText);
               }
           }
       };
-      console.log(dst);
       xhr.send(null);
     }
     
-    function csvArr(dataArr, dst){
-      console.log(dataArr);
-      //let list = dataArr.split('\n');
-      //for(let i = 0; i <list.length; i++){
-      //  dst[i] = list[i].split(',');
-      //}
+    function csvArr(dataArr, dest){
+      let list = dataArr.split('\n');
+      for(let i = 0; i <list.length; i++){
+        dest[i] = list[i].split(',');
+      }
     }
     
     function checkAns(dataList){
