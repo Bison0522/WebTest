@@ -21,7 +21,7 @@
     window.onload = function(){
       let qcsv = [];
       let qarr = [];
-      arrcpy(getCsv("Questions.csv"), qcsv);
+      getCsv("Questions.csv", qcsv);
       console.log(qcsv);
       //arrcpy(csvArr(qcsv), qarr);
     }
@@ -32,14 +32,13 @@
       }
     }
       
-    function getCsv(data){
+    function getCsv(data, dst){
       let xhr = new XMLHttpRequest(); 
-      let responce = [];
       xhr.open("GET",data,true);
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
-                arrcpy(xhr.responseText, responce);
+                arrcpy(xhr.responseText, dst);
               } 
               else {
                 console.error(xhr.statusText);
@@ -47,7 +46,6 @@
           }
       };
       xhr.send(null);
-      return responce;
     }
     
     function csvArr(dataArr){
