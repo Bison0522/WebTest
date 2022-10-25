@@ -43,15 +43,14 @@
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 dst  = new String(xhr.responseText);
-                console.log(dst);
               } 
               else {
                 console.error(xhr.statusText);
               }
           }
       };
-      xhr.send(null);
       console.log(dst);
+      xhr.send(null);
     }
     
     function csvArr(dataArr, dst){
