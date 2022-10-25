@@ -21,6 +21,7 @@
     window.onload = function(){     
       getCsv("Questions.csv", 0);
       getCsv("Log.csv", 1);
+      writeCsv("Log.csv");
     }
       
     function getCsv(data, num){
@@ -81,6 +82,22 @@
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); 
+    }
+      
+    function writeCsv(data){
+      let xhr = new XMLHttpRequest(); 
+      xhr.open("POST",data,true);
+      xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                xhr.send("test");
+              } 
+              else {
+                console.error(xhr.statusText);
+              }
+          }
+      };
+      xhr.send(null);
     }
       
     </script>
