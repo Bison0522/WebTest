@@ -42,7 +42,6 @@
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
-                console.log(str.getClass().getSimpleName(xhr.responseText));
                 arrcpy(xhr.responseText, dst);
               } 
               else {
@@ -53,7 +52,7 @@
       xhr.send(null);
     }
     
-    function csvArr(dataArr, dst){
+    function csvArr(String dataArr, dst){
       console.log(dataArr);
       //let list = dataArr.split('\n');
       //for(let i = 0; i <list.length; i++){
