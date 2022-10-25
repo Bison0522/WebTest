@@ -19,9 +19,9 @@
 
     <script>
     window.onload = function(){
-      getCsv("Questions.csv");
-      
-      
+      let qcsv = [];
+      qcsv = getCsv("Questions.csv");
+      csvArr(qcsv);
     }
     
     function getCsv(data){
@@ -32,7 +32,6 @@
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 responce = xhr.responseText;
-                csvArr(responce);
               } 
               else {
                 console.error(xhr.statusText);
@@ -40,6 +39,7 @@
           }
       };
       xhr.send(null);
+      return responce;
     }
     
     function csvArr(dataArr){
