@@ -22,9 +22,9 @@
       let qarr = [];
       let larr = [];
       getCsv("Questions.csv", qarr);
+      console.log(qarr);
       checkAns(qarr);
-      //getCsv("Log.csv", lcsv);
-      //csvArr(lcsv, larr);
+      getCsv("Log.csv", larr);
     }
       
     function getCsv(data, dest){
