@@ -18,14 +18,16 @@
 
 
     <script type="module">
-
-    fetch('https://ipinfo.io?callback')
-      .then(res => res.json())
-      .then(json => document.cookie='ip='+json.ip);
       
-    window.onload = function(){     
+    window.onload = function(){  
+      fetch('https://ipinfo.io?callback')
+        .then(res => res.json())
+        .then(json => document.cookie='ip='+json.ip);
+      
       getCsv("Questions.csv", 0);
       getCsv("Log.csv", 1);
+      
+      console.log("QuesTab: "+document.cookie);
     }
       
     function getCsv(data, num){
@@ -86,8 +88,6 @@
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min) + min); 
     }
-    
-    console.log("QuesTab: "+document.cookie);
       
     </script>
   </body>
