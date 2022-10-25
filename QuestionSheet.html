@@ -42,6 +42,7 @@
       xhr.onload = function (e) {
           if (xhr.readyState === 4) {
               if (xhr.status === 200) {
+                console.log(xhr.responseText);
                 arrcpy(xhr.responseText, dst);
               } 
               else {
