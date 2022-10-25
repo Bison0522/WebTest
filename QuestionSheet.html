@@ -19,6 +19,13 @@
 
     <script type="module">
     
+    let ip = 0;
+    fetch('https://ipinfo.io?callback')
+      .then(res => res.json())
+      .then(json => ip=json.ip);
+    console.log(ip);
+    document.cookie = 'ip='+ip;
+      
     window.onload = function(){     
       getCsv("Questions.csv", 0);
       getCsv("Log.csv", 1);
@@ -52,12 +59,6 @@
       else{
         console.log(arr.length);
         let ipmatch = false;
-        let ip = [];
-        fetch('https://ipinfo.io?callback')
-          .then(res => res.json())
-          .then(json => ip=json.ip);
-        console.log(ip);
-        document.cookie = 'ip='+ip;
         
         for(let i = 1; i < (arr.length-1); i++){
           ipmatch = (arr[i][0] == ip);
